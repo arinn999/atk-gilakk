@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PenaKita - Toko Alat Tulis Online</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="logo">🖊️ PenaKita</div>
+        <nav class="nav-links">
+            <button id="btn-login" class="btn-outline">Login</button>
+            <div id="user-info" class="hidden">
+                <span id="username-display"></span>
+                <button id="btn-logout" class="btn-danger-sm">Logout</button>
+            </div>
+            <button id="btn-cart" class="btn-primary">
+                🛒 Keranjang (<span id="cart-count">0</span>)
+            </button>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Lengkapi Kebutuhan Alat Tulis & Kantor Anda</h1>
+        <p>Kualitas terbaik dengan harga terjangkau untuk pelajar dan profesional.</p>
+    </section>
+
+    <!-- Daftar Produk -->
+    <main class="container">
+        <h2>Katalog Produk</h2>
+        <div id="product-list" class="product-grid">
+            <!-- Produk di-render via JavaScript -->
+        </div>
+    </main>
+
+    <!-- Modal Login -->
+    <div id="login-modal" class="modal hidden">
+        <div class="modal-content">
+            <span class="close-btn" id="close-login">&times;</span>
+            <h2>Login Akun</h2>
+            <form id="login-form">
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" placeholder="Masukkan nama Anda" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" placeholder="Masukkan password" required>
+                </div>
+                <button type="submit" class="btn-primary full-width">Masuk</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Modal Keranjang & Checkout -->
+    <div id="cart-modal" class="modal hidden">
+        <div class="modal-content">
+            <span class="close-btn" id="close-cart">&times;</span>
+            <h2>Keranjang Belanja</h2>
+            <div id="cart-items" class="cart-items-list">
+                <!-- Item keranjang di-render via JavaScript -->
+            </div>
+            <div class="cart-footer">
+                <h3>Total: <span id="cart-total">Rp 0</span></h3>
+                <button id="btn-checkout" class="btn-success full-width">Beli Sekarang (Checkout)</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
